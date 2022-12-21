@@ -89,7 +89,7 @@
       include "footer.php";
      ?>                 			
   <?php 
- include "ControlSidebar.php";
+
 ?>
       <!-- Control Sidebar -->
   
