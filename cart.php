@@ -186,7 +186,7 @@ include "navigation.php"
 								<td>
 									<h5>Tổng cộng</h5>
 								</td>
-								<td><?php echo $total ?>.000</td>
+									<td> <?php echo $total ?> .000</td>
 							</tr>
 						</table>
 						<center><a href="dathang.php" class="btn btn-1">Đặt hàng</a></center>
