@@ -62,9 +62,10 @@
                         <td ><?php echo $row["email"] ?></td>
                         <td><?php echo $row["HoTen"] ?></td>
                         <td><?php echo $row["DienThoai"] ?></td>   
-                        <td>
-                        <a class="btn btn-danger" onclick="return confirm('Bạn có thật sự muốn xóa không ?');"  href=xoakh.php?id ></a> 
-                       
+                            
+                        <td>           
+                         <a class="btn btn-danger" onclick="return confirm('Bạn có thật sự muốn xóa không ?');" href="xoakh.php?id=<?php  echo $row["id"]  ?>"><i class="fa fa-trash-o fa-lg" <acronym title="Xóa">
+                         </acronym></i></a></td>
                          
                         </tr>
                         <?php

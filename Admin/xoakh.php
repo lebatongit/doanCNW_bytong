@@ -6,11 +6,12 @@
     $sql = "DELETE FROM loginuser WHERE id=".$id;
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: quanlykhachhang.php');
+        header('Location:qlykhachhang.php');
     } else {
         echo "Error deleting record: " . $conn->error;
     }
 
 $conn->close();
 ?>
+
 </script>

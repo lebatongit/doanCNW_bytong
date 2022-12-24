@@ -65,7 +65,7 @@
                          
                         <td><?php  echo $stt1++; ?></td>
                         <td><a href =" chitietsp.php?id=<?php echo $row["ID"]?>" style="color:black"><?php echo $row["Ten"] ?></a></td>
-                        <td><?php echo $row["Gia"] ?></td>
+                        <td><?php echo $row["Gia"] ?>.000 VNĐ</td>
                         <td><img src="../images/<?php echo $row["HinhAnh"]?>" style="width:100px;height:100px"></td>
                         <td><?php echo $row["tacgia"] ?></td>
                         <td><?php echo $row["Tennhasx"] ?></td>

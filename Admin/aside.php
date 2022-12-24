@@ -1,4 +1,5 @@
 <?php 
+
  include "head.php";
  
 ?>
@@ -12,15 +13,16 @@
             </div>
             <div class="pull-left info">
           
-              <?php
+              <?php if(isset($_SESSION['phanquyen'])){
               	echo '<li><span class="glyphicon glyphicon-user"></span> Xin chào ' ; echo '<span style="color:Tomato;"><b>' . $_SESSION['tendangnhap'] . '</b></span></li>' ;
+              }
+              else{
+                echo '<li><span class="glyphicon glyphicon-user"></span> Đăng nhập';               }
               ?>
          
             </div>
           </div>
-          <!-- search form -->
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
+       
           <ul class="sidebar-menu">
             <li class="header"></li>
             <li class="active treeview">
@@ -45,14 +47,12 @@
               <ul class="treeview-menu">
                 <li><a href="quanlyhoadon.php"><i class=""></i> Danh Sách hóa đơn</a></li>
                 <li><a href="qlykhachhang.php"><i class=""></i> Danh Sách khách hàng</a></li>
-                <li><a href="qlyadmin.php"><i class=""></i> Danh Sách tài khoản quản trị</a></li>
+                
                 <li> 
-                <?php
-                         if($_SESSION["phanquyen"]==1) {  ?> 
-                             <li><a href="qlyadmin.php"><span class="glyphicon glyphicon-list-alt"></span> Quản lý người dùng</a></li>
-                             <?php }
-                             
-                             ?>
+               
+              <?php if(isset($_SESSION['phanquyen']) && $_SESSION['phanquyen']==1){ ?>
+            <li><a href="qlyadmin.php"><span class="glyphicon glyphicon-list-alt"></span> Quản lý người dùng</a></li>
+                                     <?php }?>
                         
                          
                

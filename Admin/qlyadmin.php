@@ -39,9 +39,9 @@
                       <tr>
                         <th>tên tài khoản</th>
                         <th>Họ tên</th>
-                       
                         <th>Trang thái tài khoản</th>
                         <th>Phân quyền</th>
+                        <th>Thao Tác</th>
                        
 
                       </tr>
@@ -59,13 +59,27 @@
                         <td ><?php echo $row["tendangnhap"] ?></td>
                         <td><?php echo $row["ten"] ?></td>
                         <td><?php 
+                         if($row["phanquyen"]==1) echo "Admin"; else echo "Nhân viên" ; 
+                        ?>
+                        <td><?php 
                          if($row["trangthai"]==1) echo "Kích hoạt"; else echo "Khóa" ; 
                         ?>
                         </td> 
-                        <td><?php 
-                         if($row["phanquyen"]==1) echo "Admin"; else echo "Nhân viên" ; 
-                        ?>
+                    
                         </td>   
+                            <td>
+                              <?php if($row["trangthai"]==1) { ?>
+                                <a href="?action=trangthai=0&tendangnhap=<?php echo $row["tendangnhap"]; ?>">Khóa</a></td></tr>
+                                <?php 
+                              }
+                              else { ?>
+                                       <a href="?action=trangthai=1&tendangnhap=<?php echo $row["	tendangnhap"]; ?>">Kích hoạt</a></td>
+
+
+
+                            </td>
+
+                        <?php } ?>
                         </tr>
                         <?php
                           }
