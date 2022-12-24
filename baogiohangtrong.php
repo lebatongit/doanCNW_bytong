@@ -5,8 +5,7 @@
 	include "head.php"
 	?>
 <?php
-$title ="Shop huy";
-$name ="Điện thoai";
+
 ?>
 <?php 
 	include "top.php"
@@ -33,7 +32,7 @@ $name ="Điện thoai";
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading"><h1 style="color:red">Giỏ hàng của bạn hiện không có sách nào hãy thêm sách vào giỏ hàng bạn nhé.</h1></div>
-					<p><h5><a href="/index.php">Bấm vào đây để về trang chủ.</a></h5></p>
+					<p><h5><a href="index.php">Bấm vào đây để về trang chủ.</a></h5></p>
 				</div>
 			</div>
 		</div>

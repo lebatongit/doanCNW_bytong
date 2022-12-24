@@ -39,6 +39,7 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
+                      <th>STT</th>
                         <th>Tên</th>
                         <th>Giá</th>
                         <th>Hình ảnh</th>
@@ -49,18 +50,21 @@
                     </thead>
                     <tbody>  
                     <?php
-                       
+                        $stt1=1;
                          require '../inc/myconnect.php';
                          $sql="SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.tacgia,s.KhuyenMai,s.Mota, n.Ten as Tennhasx
                          from sanpham s 
                          LEFT JOIN nhaxuatban n on n.ID = s.Manhasx   ORDER BY s.Ten  ";
                          $result = $conn->query($sql); 
+                     
                          if ($result->num_rows > 0) {
                           // output data of each row
                           while($row = $result->fetch_assoc()) {
                       ?>       
-                        <tr>           
-                        <td ><a href ="chitietsp.php?id=<?php echo $row["ID"]?>" style="color:black"><?php echo $row["Ten"] ?></a></td>
+                        <tr>        
+                         
+                        <td><?php  echo $stt1++; ?></td>
+                        <td><a href =" chitietsp.php?id=<?php echo $row["ID"]?>" style="color:black"><?php echo $row["Ten"] ?></a></td>
                         <td><?php echo $row["Gia"] ?></td>
                         <td><img src="../images/<?php echo $row["HinhAnh"]?>" style="width:100px;height:100px"></td>
                         <td><?php echo $row["tacgia"] ?></td>
@@ -96,6 +100,7 @@
       include "footer.php";
      ?>
   <?php 
+ 
 
 ?>
       <!-- Control Sidebar -->

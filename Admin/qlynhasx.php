@@ -42,12 +42,15 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead >
                       <tr>
+                          
+                        <th>STT</th>
                         <th>Tên</th>
                         <th>Tác vụ</th>
                       </tr>
                     </thead>
                     <tbody> 
                     <?php
+                        $stt=1;
                          require '../inc/myconnect.php';
                          $sql="SELECT ID,Ten from nhaxuatban ";
                          $result = $conn->query($sql); 
@@ -55,7 +58,8 @@
                           // output data of each row
                           while($row = $result->fetch_assoc()) {
                       ?>      
-                        <tr>                
+                        <tr>        
+                        <td><?php  echo $stt++; ?></td>        
                         <td><?php echo $row["Ten"] ?></td>
                         <td><a class="btn btn-warning" href="suanhasx.php?id=<?php  echo $row["ID"]  ?>">
                         <i class="fa fa-edit fa-lg"<acronym title="Chỉnh sửa"></acronym></i></a>               

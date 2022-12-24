@@ -41,7 +41,7 @@
 							   $total_records = $row['total'];
 							   if($row['total'] == 0)
 							   {
-								 header('Location: timkiemkhongco.php');
+								 header('Location:timkiemkhongco.php');
 							   }
 							   $offset =1;
 							   // BƯỚC 3: TÌM LIMIT VÀ CURRENT_PAGE

@@ -44,8 +44,10 @@
                       </tr>
                     </thead>
                     <tbody>  
+                   
                
                     <?php
+                       $stt=1;
                          require '../inc/myconnect.php';
                          $sql="SELECT  madv,tendv,gia   from dichvu  ";
                          $result = $conn->query($sql); 
@@ -54,7 +56,7 @@
                           while($row = $result->fetch_assoc()) {
                       ?>       
                         <tr>     
-                        <td><?php  echo $row["madv"] ?></td>                                                   
+                        <td><?php  echo $stt++; ?></td>                                                 
                         <td><?php  echo $row["tendv"] ?></td>
                         <td><?php  echo $row["gia"] ?>.000 VNĐ</td>   
                         <td><a class="btn btn-warning" href="suadv.php?madv=<?php  echo $row["madv"]  ?>">

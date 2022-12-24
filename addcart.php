@@ -16,6 +16,5 @@ if(isset($_POST['submit']))
         }
         $_SESSION['cart'][$idsp] = $sl;
         echo "string";
-
-}
+    }
 ?>	

@@ -25,10 +25,10 @@ include "navigation.php"
 <?php
 
 // if (is_countable($aa) && count($aa) > 0) :
-if (is_countable($_SESSION['cart']) == 0)
+if (var_dump(is_countable($_SESSION['cart'])) == 0)
 		{
-			header('Location:   baogiohangtrong.php');
-			header('Location:baogiohangtrong.php');  
+			header('Location:baogiohangtrong.php');
+			
 		}
 ?>
 <div id="page-content" class="single-page">

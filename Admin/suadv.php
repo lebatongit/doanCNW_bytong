@@ -81,7 +81,7 @@ $row = $result->fetch_assoc();
       include "footer.php";
      ?>
   <?php 
- include "ControlSidebar.php";
+
 ?>
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->

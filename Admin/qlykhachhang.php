@@ -37,39 +37,42 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
+                        <th>STT</th>
+                        <th>ID</th>
                         <th>Email</th>
                         <th>Họ tên</th>
                         <th>Số điện thoại</th>
+                        <th>Thao Tác</th>
                        
-                        <th>Trang thái tài khoản</th>
-                       
-
                       </tr>
                     </thead>
                     <tbody>  
                     <?php
+                    $stt=1;
                          require '../inc/myconnect.php';
-                         $sql="SELECT email,HoTen,DienThoai,trangthai from loginuser Order by HoTen";
+                         $sql="SELECT id,email,HoTen,DienThoai from loginuser Order by HoTen";
                          $result = $conn->query($sql); 
                          if ($result->num_rows > 0) {
                           // output data of each row
                           while($row = $result->fetch_assoc()) {
                       ?>       
-                        <tr>           
+                        <tr>     
+                        <td><?php  echo $stt++; ?></td>   
+                        <td><?php echo $row["id"] ?></td>      
                         <td ><?php echo $row["email"] ?></td>
                         <td><?php echo $row["HoTen"] ?></td>
                         <td><?php echo $row["DienThoai"] ?></td>   
+                        <td>
+                        <a class="btn btn-danger" onclick="return confirm('Bạn có thật sự muốn xóa không ?');"  href=xoakh.php?id ></a> 
                        
-                        <td><?php 
-                         if($row["trangthai"]==1) echo "Kích hoạt"; else echo "Khóa" ; 
-                        ?>
-                        </td>   
+                         
                         </tr>
                         <?php
                           }
                         }
                          ?>
-                     
+                  
+            
                       
                     </tbody>                   
                   </table>

@@ -37,7 +37,8 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                       <th>Số đơn hàng</th>
+                        <th>STT</th>
+                       <th>Mã Đơn Hàng</th>
                         <th>Tên Sách</th>
                         <th>Số lượng</th>
                         <th>Đơn giá</th>
@@ -49,6 +50,7 @@
                     <tbody>  
                
                     <?php
+                    $stt=1;
                          require '../inc/myconnect.php';
                          $sql="SELECT h.sodh,soluong,dongia,h.thanhtien
                          ,s.Ten as tensanpham,ngaygiao,madv
@@ -60,7 +62,8 @@
                           // output data of each row
                           while($row = $result->fetch_assoc()) {
                       ?>       
-                        <tr>     
+                        <tr>   
+                        <td><?php  echo $stt++; ?></td>     
                         <td><?php  echo $row["sodh"] ?></td>                                                   
                         <td ><a href ="chitiethd.php?sodh=<?php echo $row["sodh"]?>" style="color:black"><?php echo $row["tensanpham"] ?>  </a>     
                         </td>
