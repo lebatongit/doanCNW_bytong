@@ -46,7 +46,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="quanlyhoadon.php"><i class=""></i> Danh Sách hóa đơn</a></li>
-                <li><a href="qlykhachhang.php"><i class=""></i> Danh Sách khách hàng</a></li>
+                <li><a href="qlykhachhang.php"><i class="glyphicon glyphicon-oil"></i> Danh Sách khách hàng</a></li>
                 
                 <li> 
                

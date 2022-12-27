@@ -16,7 +16,7 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="images/7.png" alt="First slide" width="1200" height="60">
+								<img src="images/7.png" alt="First slide" width="1200" height="20">
 								<!-- Static Header -->
 								<div class="header-text hidden-xs">
 									<div class="col-md-12 text-center">
@@ -24,7 +24,7 @@
 								</div><!-- /header-text -->
 							</div>
 							<div class="item">
-								<img src="images/4.png" alt="Second slide" width="1200" height="60">
+								<img src="images/4.png" alt="Second slide" width="1200" height="20">
 								<!-- Static Header -->
 								<div class="header-text hidden-xs">
 									<div class="col-md-12 text-center">
@@ -32,7 +32,7 @@
 								</div><!-- /header-text -->
 							</div>
 							<div class="item">
-								<img src="images/9.png" alt="Third slide" width="1200" height="60" >
+								<img src="images/9.png" alt="Third slide" width="1200" height="20" >
 								<!-- Static Header -->
 								<div class="header-text hidden-xs">
 									<div class="col-md-12 text-center">
@@ -40,7 +40,7 @@
 								</div><!-- /header-text -->
 							</div>
 							<div class="item">
-								<img src="images/10.png" alt="Third slide" width="1200" height="60">
+								<img src="images/10.png" alt="Third slide" width="1200" height="20">
 								<!-- Static Header -->
 								<div class="header-text hidden-xs">
 									<div class="col-md-12 text-center">
